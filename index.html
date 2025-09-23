@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirect</title>
+</head>
+<body>
+<script>
+fetch('current_url.txt').then(r=>r.text()).then(url=>{
+  if(!url) document.body.innerText = "No target URL set";
+  else window.location.replace(url.trim());
+});
+</script>
+</body>
+</html>
